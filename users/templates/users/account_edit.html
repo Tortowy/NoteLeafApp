@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>
+Edit Account detail
+</title>
+
+{% endblock %}
+
+{% block content %}
+
+        <h1>
+            <b>Acount detail</b>
+        </h1>
+
+
+
+    <form method="POST">{% csrf_token %}
+        <div class="container">
+
+            {% for field in form %}
+
+
+
+            <div class="note-element">
+                <div class="note-caption">
+                        <b>
+                            {{ field.label_tag }}
+
+                        </b>
+                </div>
+            </div>
+
+            <div class="note-element">
+                {{ field }}
+            </div>
+
+            {% endfor %}
+
+            <div class="note-element">
+                <div class="note-caption">
+                        <b>
+                            Password:
+
+                        </b>
+                </div>
+            </div>
+
+            <div class="note-element">
+                <a href="/users/detail/edit/password_change" style="text-decoration: underline"> Change Password </a>
+            </div>
+
+
+
+        </div>
+        <h1>
+            <a>
+                <button>
+                    <input class="save-note-button" type="submit" value="Save">
+                </button>
+            </a>
+        </h1>
+
+    </form>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+{% endblock %}

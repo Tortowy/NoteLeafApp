@@ -1,0 +1,101 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+    {% block title %}
+        <title> Base Title </title>
+    {% endblock %}
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+
+{% include "navbar.html" %}
+
+
+
+{% for message in messages %}
+
+{% if  message.tags == 'alert-success' %}
+<div class="container-fluid p-0">
+  <div class="alert alert-success alert-dismissible " role="alert" >
+    <span class="closebtn">&times;</span>
+    <div class="alert-text">
+        {{ message }}
+
+    </div>
+  </div>
+</div>
+
+{% endif %}
+
+{% if  message.tags == 'alert-danger' %}
+<div class="container-fluid p-0">
+  <div class="alert alert-danger alert-dismissible " role="alert" >
+    <span class="closebtn">&times;</span>
+    <div class="alert-text">
+        {{ message }}
+
+    </div>
+  </div>
+</div>
+{% endif %}
+
+
+{% if  message.tags == 'alert-info' %}
+<div class="container-fluid p-0">
+  <div class="alert alert-info alert-dismissible " role="alert" >
+    <span class="closebtn">&times;</span>
+    <div class="alert-text">
+        {{ message }}
+
+    </div>
+  </div>
+</div>
+{% endif %}
+
+
+{% endfor %}
+
+
+
+
+
+      {% block content %}
+      {% endblock %}
+
+
+
+<script>
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function(){
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+}
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

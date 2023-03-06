@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+<title>
+    Notes List
+</title>
+{% endblock %}
+
+
+{% block content %}
+
+<h1> <b>Edit Note</b> </h1>
+
+
+
+
+
+
+
+
+
+
+
+    <form method="POST">{% csrf_token %}
+        <div class="container">
+
+            {% for field in form %}
+
+                <div class="note-element">
+                    <div class="note-caption">
+                        <b>
+
+                            {{ field.label_tag }}
+
+
+                        </b>
+                </div>
+        </div>
+
+            <div class="note-element">
+                {{ field }}
+            </div>
+
+            {% endfor %}
+
+
+
+
+
+        </div>
+        <h1>
+            <a>
+                <button>
+                    <input class="save-note-button" type="submit" value="Save">
+                </button>
+            </a>
+        </h1>
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

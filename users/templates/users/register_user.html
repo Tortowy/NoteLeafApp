@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>
+    Register Page
+</title>
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+<h1>
+   <b>Register</b>
+</h1>
+<br>
+    <div class="login-area">
+        <div class="login-box r">
+            <h1 style="padding: 0px">Register here</h1>
+            <form  class="login-form" method="POST">{% csrf_token %}
+                {{ form }}
+                <br>
+                <br>
+                <input type="submit" name="" value="Register" style="cursor: pointer;">
+
+            </form>
+
+        </div>
+
+    </div>
+
+{% endblock %}

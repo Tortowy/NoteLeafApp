@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+<title>
+    Detail Note View
+</title>
+{% endblock %}
+
+
+{% block content %}
+
+<h1> <b>Note View</b> </h1>
+
+
+        <div class="container">
+        <div class="note-element">
+            <div class="note-caption">
+                <b>Title:</b>
+            </div>
+        </div>
+
+        <div class="note-element">
+            {{ object.title }}
+        </div>
+
+        <div class="note-element">
+            <div class="note-caption">
+               <b>Category:</b>
+            </div>
+
+        </div>
+
+        <div class="note-element">
+            {{ object.category }}
+        </div>
+
+        <div class="note-element">
+            <div class="note-caption">
+               <b>Content:</b>
+            </div>
+
+        </div>
+
+        <div class="note-element">
+            {{ object.content }}
+        </div>
+
+        <div class="note-element">
+            <div class="note-caption">
+               <b>Creation date:</b>
+            </div>
+
+        </div>
+
+        <div class="note-element">
+            {{ object.creation_date }}
+        </div>
+
+        <div class="note-element">
+            <div class="note-caption">
+               <b>Execution date:</b>
+            </div>
+
+
+        </div>
+
+        <div class="note-element">
+            {{ object.execution_date }}
+        </div>
+
+        <div class="note-element">
+            <div class="note-caption">
+               <b>Priority:</b>
+            </div>
+
+
+        </div>
+
+        <div class="note-element">
+            {{ object.priority }}
+        </div>
+
+
+
+
+    </div>
+
+<h1>
+    <a href="/notes/{{object.id}}/edit_view">
+        <button>Edit</button>
+    </a>
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

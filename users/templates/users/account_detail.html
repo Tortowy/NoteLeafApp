@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>
+Account detail
+</title>
+
+{% endblock %}
+
+{% block content %}
+
+
+        <h1>
+            <b>Acount detail</b>
+
+        </h1>
+
+        <div class="container">
+
+
+
+            <div class="note-element">
+                    <div class="note-caption">
+                      <b>  Id:</b>
+                    </div>
+
+            </div>
+
+            <div class="note-element">
+               {{ object.id }}
+            </div>
+
+                        <div class="note-element">
+                    <div class="note-caption">
+                       <b>
+                           Name:
+                       </b>
+                    </div>
+
+            </div>
+
+            <div class="note-element">
+                {{ object.first_name }}
+            </div>
+
+
+                        <div class="note-element">
+                    <div class="note-caption">
+                        <b>
+                            Surname:
+                        </b>
+                    </div>
+
+            </div>
+
+            <div class="note-element">
+                {{ object.second_name }}
+            </div>
+
+
+
+
+
+            <div class="note-element">
+                    <div class="note-caption">
+                       <b>
+                            Email:
+                       </b>
+                    </div>
+
+            </div>
+
+            <div class="note-element">
+                {{ object.email }}
+            </div>
+
+            <div class="note-element">
+                    <div class="note-caption">
+                       <b>
+                           User name:
+                       </b>
+                    </div>
+
+            </div>
+
+            <div class="note-element">
+                {{ object.username }}
+            </div>
+
+            <div class="note-element">
+                    <div class="note-caption">
+                    <b>
+                        Date joined:
+                    </b>
+                    </div>
+
+            </div>
+
+            <div class="note-element">
+                {{ object.date_joined }}
+            </div>
+
+
+                        <div class="note-element">
+                    <div class="note-caption">
+                        <b>
+                            Is Admin:
+                        </b>
+                    </div>
+
+            </div>
+
+            <div class="note-element">
+                {{ object.is_admin }}
+            </div>
+
+
+            <div class="note-element">
+                    <div class="note-caption">
+                       <b> Is SuperUser:</b>
+                    </div>
+
+            </div>
+
+            <div class="note-element">
+                {{ object.is_superuser }}
+            </div>
+
+            <div class="note-element">
+                    <div class="note-caption">
+                       <b>
+                           Is Staff:
+                       </b>
+                    </div>
+
+            </div>
+
+            <div class="note-element">
+                {{ object.is_staff }}
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+        <h1>
+            <a href="edit/">
+                <button>
+                    <input class="save-note-button" type="submit" value="Edit">
+                </button>
+            </a>
+        </h1>
+
+
+
+
+
+
+
+{% endblock %}

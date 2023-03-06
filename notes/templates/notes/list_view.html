@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+<title>
+    Notes List
+</title>
+{% endblock %}
+
+
+{% block content %}
+
+<h1> <b>List view Notes</b> </h1>
+
+
+
+
+
+
+    <div class="notes-container">
+
+
+        {% for i in object_list %}
+
+
+
+                <div class="note-box">
+                    <div class="note-header">
+                        <a href="{{ i.id }}/detail_view">
+                            {{ i.title }}
+                        </a>
+
+                    </div>
+                    <div class="note-content">
+                        <b style="font-weight: bold">Category</b> : {{ i.category }}
+                    <br>
+                      <b style="font-weight: bold">Content</b> : {{ i.content }}
+                    <br>
+                     <b style="font-weight: bold">Priority</b> :
+                        {% if  i.priority == '1' %}
+                        Low
+                        {% elif i.priority == '2' %}
+                        Medium
+                        {% elif i.priority == '3' %}
+                        High
+                        {% endif %}
+
+                    </div>
+
+                    <div class="edit-note">
+                        <a class="edit-note-button" href="{{i.id}}/edit_view"> Edit</a>
+                    </div>
+
+
+                </div>
+
+
+
+            {% endfor %}
+
+
+
+    </div>
+
+
+    <footer>
+
+            <a class="adding-note-footer" href="/notes/create_view/">
+                Add New Note
+            </a>
+
+    </footer>
+
+
+
+
+{% endblock %}

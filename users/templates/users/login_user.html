@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>
+    Login Page
+</title>
+{% endblock %}
+
+{% block content %}
+
+<h1>
+   <b> Login</b>
+</h1>
+<br>
+    <div class="login-area">
+        <div class="login-box">
+            <h1>Login here</h1>
+            <form class="login-form" method="POST">{% csrf_token %}
+                <p>Email</p>
+                <input type="text" name="email" placeholder="Enter Email">
+                <p>Password</p>
+                <input type="password" name="password" placeholder="Enter Password">
+                <br>
+                <br>
+                <input type="submit" name="" value="Login" style="cursor: pointer">
+                <br>
+                <br>
+                <a href="/users/password_reset/" class="form-question"> Forgot Password?</a>
+                <br>
+                <a href="/users/register_user/" class="form-question"   > Don't have account?</a>
+            </form>
+
+        </div>
+
+    </div>
+
+{% endblock %}
