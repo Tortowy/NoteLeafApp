@@ -9,12 +9,7 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 # Register your models here.
 
-# class UserAdmin(admin.ModelAdmin):
-#     search_fields = ['email']
-#     form = UserAdminChangeForm # edit form
-#     add_form = UserAdminCreationForm # creation form
-#     class Meta:
-#         model = User
+
 
 class UserAdmin(BaseUserAdmin):
     # The forms to add and change user instances

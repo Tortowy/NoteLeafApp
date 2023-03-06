@@ -16,15 +16,9 @@ from .forms import NoteUpdateForm
 
 
 
-class NotesListView(ListView):
-    template_name = "notes/list_view.html"
-    queryset = Note.objects.all()
-
-
-
 @login_required(login_url="/users/login_user/")
 def notes_passed_by_method(request):
-    query_set = Note.objects.all()
+
     loggedUser = request.user
 
     proper_set = Note.objects.filter(owner_id=loggedUser)
@@ -56,7 +50,7 @@ class UserAccessMixin(PermissionRequiredMixin):
         for i in proper_set:
             if str(i.owner_id) == str(request.user) and str(i.id) == str(self.kwargs.get('id')):
                 flag = True
-        if flag == False:
+        if not flag:
             messages.error(request,("This note does not exist!"))
             return redirect('/notes')
         return super(UserAccessMixin,self).dispatch(request,*args,**kwargs)
@@ -82,7 +76,7 @@ class NoteDetailView(UserAccessMixin,DetailView,LoginRequiredMixin):
 class NoteUpdateView(UserAccessMixin,UpdateView,LoginRequiredMixin):
     login_url = "/users/login_user/"
     model = Note
-    permission_required = 'dupa'
+    permission_required = 'notUsed'
     form_class = NoteUpdateForm
     template_name = 'notes/edit_view.html'
     queryset = Note.objects.all()
@@ -99,7 +93,7 @@ class NoteUpdateView(UserAccessMixin,UpdateView,LoginRequiredMixin):
 class NoteCreateView(UserAccessMixin,CreateView,LoginRequiredMixin):
     login_url = "/users/login_user/"
     model = Note
-    permission_required = 'dup'
+    permission_required = 'notUsed'
     form_class = NoteUpdateForm
 
 

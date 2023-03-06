@@ -19,10 +19,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 from django.views.generic import (
-    DetailView,
-    ListView,
-    CreateView,
-    DeleteView,
+
     UpdateView
 )
 
@@ -147,7 +144,7 @@ def register_user(request):
             activateEmail(request,user,form.cleaned_data.get('email'))
 
 
-            #messages.success(request,("Registration succesful!"))
+            
             return redirect('home')
         else:
             messages.error(request,("There was an error with your form..."))

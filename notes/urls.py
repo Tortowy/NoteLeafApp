@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .views import NotesListView,notes_passed_by_method,NoteDetailView,NoteUpdateView,NoteCreateView
+from .views import notes_passed_by_method,NoteDetailView,NoteUpdateView,NoteCreateView
 
 
 
@@ -24,7 +24,7 @@ from .views import NotesListView,notes_passed_by_method,NoteDetailView,NoteUpdat
 app_name="notes"
 urlpatterns =[
 
-    #path('',NotesListView.as_view(),name="notes_list_view"),
+
     path('',notes_passed_by_method,name="notes_list_view"),
 
     path("<int:id>/detail_view/",NoteDetailView.as_view(),name="detail_note_view"),
