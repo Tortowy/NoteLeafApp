@@ -3,9 +3,18 @@
 Aplikacja webowa NoteLeafApp napisana w frameworku django(4.1) służy do gromadzenia notatek na indywidualnych kontach
 (notatki są zapisywane w bazie danych). Z poziomu aplikacji możliwe jest zarejestrowanie się z 
 koniecznością potwierdzenia autentyczności maila(na podany adres email jest wysyłany link aktywacyjny).
+
+![RegisterView](https://user-images.githubusercontent.com/69354928/223404811-6397c58b-69a5-4ea1-a8c0-fe902ef2188b.png)
+
+![registrationMail](https://user-images.githubusercontent.com/69354928/223405288-522a6f84-3add-4631-9772-5d86ea1dbd94.png)
+
+
 Po zalogowaniu użytkownik może dodawać,edytować i usuwać swoje notatki.
 
 ![LoginView](https://user-images.githubusercontent.com/69354928/223404534-64b3f578-73c6-4344-8de3-015b29fd2374.png)
+
+
+![AddingNote](https://user-images.githubusercontent.com/69354928/223404681-74efb65a-2d85-408d-b979-58a66a78bbfe.png)
 
 
 Hasła w do indywidualnych kont użytkowników przechowywane są w bazie danych w postaci hashy(SHA-256).
