@@ -20,6 +20,12 @@ Po zalogowaniu użytkownik może dodawać,edytować i usuwać swoje notatki.
 Hasła w do indywidualnych kont użytkowników przechowywane są w bazie danych w postaci hashy(SHA-256).
 W sytuacji gdy użytkownik zapomni swojego hasła możliwe jest jego odzyskanie(poprzez wysłanie linku na podany mail).
 
+![resetPasswordInApp](https://user-images.githubusercontent.com/69354928/223405629-e4f34887-fd83-4267-a594-3298d9cee8c1.png)
+
+![resetPassword](https://user-images.githubusercontent.com/69354928/223406026-72d838c9-1ccb-4489-915d-de4134d0b15c.png)
+
+
+
 Atrybuty klasy Notatka(Note) to:
 	-Tytuł,
 	-Konent,
