@@ -47,3 +47,7 @@ Atrybuty klasy Użytkownik(User):
 	-Flaga active(symbolizuje aktywność konta),
 	-Flaga staff,
 	-Flaga superuser,
+	
+	
+![AccountDetailEdit](https://user-images.githubusercontent.com/69354928/223406521-7dbc0825-8edf-415c-91f7-63c29db703c8.png)
+	
