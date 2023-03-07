@@ -28,7 +28,7 @@ W sytuacji gdy użytkownik zapomni swojego hasła możliwe jest jego odzyskanie(
 
 Atrybuty klasy Notatka(Note) to:
 	-Tytuł,
-	-Konent,
+	-Kontent,
 	-Kategoria,
 	-Data utworzenia,
 	-Data wykonania(planowana),
